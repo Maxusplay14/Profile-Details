@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body>
+    <div class="main-container">
+        
+    <!-- ---------HEADER SECTION---- -->
+        <header class="header">
+            <div class="header__logo-container">
+                <img class="header__logo" src="https://1000marcas.net/wp-content/uploads/2022/07/Logo-Acer.png" alt="logo">
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-ul">
+                    <li class="header__nav-li"><a class="header__nav-link" onclick="SelectTab(this)" href="#">Dashboard</a></li>
+                    <li class="header__nav-li"><a class="header__nav-link" onclick="SelectTab(this)" href="#">People</a></li>
+                    <li class="header__nav-li"><a class="header__nav-link" onclick="SelectTab(this)" href="#">Contracts</a></li>
+                    <li class="header__nav-li"><a class="header__nav-link" onclick="SelectTab(this)" href="#">Benefits</a></li>
+                    <li class="header__nav-li">
+                        <!--Esto deberia ser un botón o mas bien una vaina de esta de seleccion multiple o un menu con js-->
+                        <a class="header__nav-link" href="#">More <span class="material-symbols-outlined">keyboard_arrow_down</span> </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+    <!-- --------ASIDE SECTION------ -->
+        <aside class="aside">
+
+            <div class="aside__header">
+                <div class="aside__button-container">
+                    <button class="aside__back-button">
+                        <span class="material-symbols-outlined">arrow_back_ios_new</span>Back
+                    </button>
+                </div>
+                <div class="aside__user">
+                    <div class="aside__user-img">
+                        <img src="https://5fdbcabe.delivery.rocketcdn.me/wp-content/uploads/2025/03/Der-Fischotter-im-Steckbrief-Wildtiere-in-Europa.webp" alt="Foto de Perfil">
+                    </div>
+                    <h2>Arlene McCoy</h2>
+                </div>
+            </div>
+
+            <div class="aside__body">
+                <small>Space</small>
+                <p>Digital</p>
+                
+                <small>Progression</small>
+                <p>Expert</p>
+                
+                <small>Work e-mail</small>
+                <p>amccoy@virtuslab.com</p>
+
+                <form class="aside__body-form">
+                    <small>Private e-mail</small>
+                    <input type="text" placeholder="Add...">
+                    
+                    <small>Phone</small>
+                    <input type="tel" placeholder="Add...">
+                    
+                    <small>PESEL</small>
+                    <input type="text" placeholder="Add...">
+                </form>
+
+                <button class="aside__body-button">View all fields</button>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        function SelectTab(el){
+            document.querySelectorAll('.header__nav-link').forEach(link => {
+                link.classList.remove('header__nav-link--active');
+            });
+            el.classList.add('header__nav-link--active');
+        }
+    </script>
+
+</body>
+</html>
