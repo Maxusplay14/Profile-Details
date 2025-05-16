@@ -30,8 +30,9 @@
         </header>
 
     <!-- --------ASIDE SECTION------ -->
+    <div class="main-container__body">
         <aside class="aside">
-
+        
             <div class="aside__header">
                 <div class="aside__button-container">
                     <button class="aside__back-button">
@@ -40,37 +41,114 @@
                 </div>
                 <div class="aside__user">
                     <div class="aside__user-img">
-                        <img src="https://5fdbcabe.delivery.rocketcdn.me/wp-content/uploads/2025/03/Der-Fischotter-im-Steckbrief-Wildtiere-in-Europa.webp" alt="Foto de Perfil">
+                        <img src="https://5fdbcabe.delivery.rocketcdn.me/wp-content/uploads/2025/03/Der-Fischotter-im-Steckbrief-Wildtiere-in-Europa.webp"
+                            alt="Foto de Perfil">
                     </div>
                     <h2>Arlene McCoy</h2>
                 </div>
             </div>
-
+        
             <div class="aside__body">
                 <small>Space</small>
                 <p>Digital</p>
-                
+        
                 <small>Progression</small>
                 <p>Expert</p>
-                
+        
                 <small>Work e-mail</small>
                 <p>amccoy@virtuslab.com</p>
-
+        
                 <form class="aside__body-form">
                     <small>Private e-mail</small>
                     <input type="text" placeholder="Add...">
-                    
+
                     <small>Phone</small>
                     <input type="tel" placeholder="Add...">
-                    
+        
                     <small>PESEL</small>
                     <input type="text" placeholder="Add...">
                 </form>
-
+        
                 <button class="aside__body-button">View all fields</button>
             </div>
         </aside>
-    </div>
+
+        <main class="main">
+            <nav class="main__nav">
+                <ul class="main__nav-ul">
+                    <li class="main__nav-li"><a class="main__nav-link" href="#" onclick="MainSelectTab(this)">Overview</a></li>
+                    <li class="main__nav-li">Activity</li>
+                    <li class="main__nav-li">Contracts</li>
+                    <li class="main__nav-li">Benefits</li>
+                    <li class="main__nav-li">Projects</li>
+                    <li class="main__nav-li">Documents</li>
+                    <li class="main__nav-li">Family</li>
+                </ul>
+            </nav>
+
+            <div class="main__user-stat-container">
+                <div class="user-stat__filled">
+                    <div class="user-stat__filled__icon-container">
+                        <span class="material-symbols-outlined">person_edit</span>
+                    </div>
+                    <div class="user-stat__filled-details">
+                        <h2>12%</h2>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                        <br>
+                        <small>of the profile is filled out</small>
+                    </div>
+                </div>
+
+                <div class="user-stat__timer">
+                    <div class="user-stat__timer__icon-container">
+                        <span class="material-symbols-outlined">schedule</span>
+                    </div>
+
+                    <div class="user-stat__timer-details">
+                        <h2>0h</h2>
+                        <span class="material-symbols-outlined">chevron_right</span>
+                        <br>
+                        <small>reported time this month</small>
+                    </div>
+                </div>
+            </div>
+
+            <section class="main__contract-section">
+                <div class="contract-section__info">
+                    <small>One important thing...</small>
+                    <h2>Arlene is waiting for the draft contract</h2>
+
+                    <form class="contract-section__button">
+                        <button>Create Contract</button>
+                    </form>
+
+                </div>
+                <div class="contract-section__img-container">
+                    <img src="images/contract.jpg" alt="Imagen de contrato">
+                </div>
+            </section>
+
+            <section class="main__user-status">
+                <div class="status">
+                    <small>Status</small>
+                    <ul>
+                        <li style="list-style:disc; margin-left: 1rem;"><strong>Recruitment stage</strong></li>
+                    </ul>
+                </div>
+
+                <div class="created">
+                    <small>Created</small><br>
+                    <strong>February 24, 2023</strong>
+                </div>
+
+                <div class="Last">
+                    <small>Last Updated</small> <br>
+                    <strong>February 24, 2023</strong>
+                </div>
+            </section>
+        </main>
+    </div>        
+</div>
 
     <script>
         function SelectTab(el){
@@ -78,6 +156,13 @@
                 link.classList.remove('header__nav-link--active');
             });
             el.classList.add('header__nav-link--active');
+        }
+
+        function MainSelectTab(el){
+            document.querySelectorAll('.main__nav-link').forEach(elements => {
+                elements.classList.remove('main__nav-link--active');
+            });
+            el.classList.add('main__nav-link--active')
         }
     </script>
 
