@@ -219,10 +219,10 @@ li {
 }
 
 .user-stat__filled__icon-container, .user-stat__timer__icon-container{
-    display: inline-block;
     padding: 15px;
     box-shadow: 0px 0px 5px 1px #0002;
-    border-radius: 50px;
+    border-radius: 50%;
+    display: flex;
 }
 
 .user-stat__filled-details h2, .user-stat__timer-details h2{
